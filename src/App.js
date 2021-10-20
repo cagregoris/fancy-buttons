@@ -1,4 +1,5 @@
 //Style Sheets
+import { useState } from 'react/cjs/react.development';
 import './App.css';
 
 //Components
@@ -8,13 +9,16 @@ import LightSwitchButton from './components/LightSwitchButton';
 import TextRepeaterButton from './components/TextRepeatButton';
 
 function App() {
+
+  const [light, setLight] = useState('off');
+
   return (
     <div className={`App`}>
       <h1>Fancy Buttons!</h1>
       <section>
      <AngryButton />
      <CounterButton />
-     <LightSwitchButton />
+     <LightSwitchButton light={light} setLight={setLight}/>
      <TextRepeaterButton />
       </section>
     </div>
