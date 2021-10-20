@@ -13,7 +13,7 @@ function App() {
   const [light, setLight] = useState('off');
 
   return (
-    <div className={`App`}>
+    <div className={`App dark`} >
       <h1>Fancy Buttons!</h1>
       <section>
      <AngryButton />
